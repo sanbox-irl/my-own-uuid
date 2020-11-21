@@ -13,7 +13,7 @@ In your Cargo.toml:
 
 ```toml
 [dependencies]
-my-own-uuid = 0.1.0
+my-own-uuid = "0.1.0"
 ```
 
 ## When would you want to use a macro such as this
