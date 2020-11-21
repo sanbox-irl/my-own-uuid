@@ -19,7 +19,6 @@
 //! you against accidentally confusing your Uuids. Simply access the newtype directly with `.0`,
 //! and you are back in full control over the raw Uuid data. Having our newtypes be an opaque
 //! wrapper is a non-goal of this project
-
 /// Make your own Uuid.
 ///
 /// We might use this to differentiate between two different identifiers:
@@ -102,7 +101,7 @@ macro_rules! my_own_uuid {
             }
         }
 
-        impl std::fmt::Display for EntityId {
+        impl std::fmt::Display for $this_val {
             fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
                 write!(f, "{}({})", stringify!($this_val), self.0)
             }
