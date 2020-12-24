@@ -75,7 +75,7 @@ macro_rules! my_own_uuid {
         #[derive(
             PartialEq, Eq, Hash, Copy, Clone, Default, Debug, PartialOrd, Ord,
         )]
-        #[cfg_attr(feature="serde", derive(serde::Serialize, serde::Deserialize))]
+        #[derive(serde::Serialize, serde::Deserialize)]
         $(#[$meta])*
         pub struct $this_val(pub uuid::Uuid);
 
